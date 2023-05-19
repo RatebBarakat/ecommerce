@@ -16,7 +16,7 @@ This repository contains the source code for an e-commerce website built using t
 
 To set up the project locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/ecommerce-laravel.git`
+1. Clone the repository: `git clone https://github.com/RatebBarakat/ecommerce.git`
 2. Install dependencies: `composer install`
 3. Configure the database in the `.env` file.
 4. Run database migrations: `php artisan migrate`
