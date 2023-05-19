@@ -1,0 +1,262 @@
+@import url(variables.css);
+body{
+    background-color: var(--body-color);
+}
+button:focus{
+    box-shadow: none !important;
+}
+#app{
+    display: none;
+}
+#loading{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: calc(50% - 30px);
+    left: calc(30% - 50px);
+}
+.back_to_top{
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    z-index: 100;
+    border-radius: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: var(--blue);
+    border: none;
+}
+nav .navbar-brand svg{
+    width: 35px;
+    height: 35px;
+    fill: var(--blue) !important;
+}
+.container{
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.no-grid{
+    grid-column-start: -1;
+    grid-column-end: 1;
+}
+.product{
+    min-width: 230px;
+    max-width: 300px;
+    place-self: center;
+    box-shadow: 0 1px 9px 1px rgb(0 0 0 / 30%);
+}
+.product .image img{
+    height: 200px;
+    width: max(100%,230px);
+    object-fit: cover;
+}
+.product .product-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid lightgrey;
+}
+.product .title h3{
+    color: var(--blue);
+}
+.product.image{
+    border-bottom: 1px solid lightgray;
+}
+.close_notification{
+    animation: remove 2s linear;
+}
+.grid{
+    display: grid;
+    padding: 20px 0;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+}
+.cart-detail {
+    right: 50px;
+    top: 17px;
+    position: absolute;
+}
+.cardDisplay .number{
+    display: inline-block;
+      width: 25px;
+      background: var(--main-color);
+      text-align: center;
+      color: black;
+      border-radius: 50%;
+      height: 25px;
+      position: absolute;
+      top: -10px;
+}
+@keyframes remove {
+    to{
+        opacity: 0;
+    }
+}
+nav .avatar.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 0.255em;
+    border: none !important;
+}
+nav ul li{
+    align-self: center;
+}
+.back_to_top svg{
+    fill: var(--white);
+}
+.login{
+    position: absolute;
+    top: 16px;
+    right: 10px;
+}
+nav{
+    background-color: var(--main-color) !important;
+}
+nav a, nav .navbar-toggler-icon,nav div{
+    color: var(--black) !important;
+}
+.form-switch input{
+    height: 25px;
+    width: 45px !important;
+}
+nav .navbar-brand{
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+nav .navbar-brand span{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.dropdown-submenu {
+    position: relative;
+}
+input[type="number"]{
+    border-width: 2px !important;
+}
+.category.card-body{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+input[type="number"]:focus{
+    border: 1px solid var(--blue);
+    box-shadow: 0 0 6px var(--blue)!important;
+}
+.product-detail.col-6{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.filter-remove{
+    width: fit-content;
+    height: 30px;
+    padding: 6px;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.blue{
+    color: var(--blue) !important;
+}
+.b-blue{
+    background-color: var(--blue) !important;
+}
+.dropdown-right {
+    right: 0 !important;
+}
+nav .dropdown-menu,nav .dropdown-menu-right{
+    top:50px !important;
+    background-color: var(--dropdown-color);
+}
+.border-main{
+    border: 1px solid var(--border-color);
+}
+.modal-content{
+    background: var(--main-color);
+    color: var(--black);
+}
+/* .dropdown-menu *:not(.dropdown-item .dropdown-menu):hover{
+    background-color: var(--dropdown-item-hover) !important;
+} */
+input{
+    background-color: var(--input-color) !important;
+    color: var(--black) !important;
+}
+nav .navbar-collapse span.left,
+nav .navbar-collapse span.right{
+    display: flex;
+}
+/* ---------------------- */
+/* - BOOTSTRAP 4 - SOUS-MENU - */
+.dropdown-submenu {
+    position: relative;
+  }
+  .dropdown-submenu .dropdown-menu {
+    top: 0 !important;
+    left: 100%;
+    margin-left: .1rem;
+    margin-right: .1rem;
+  }
+  /* SPECIAL : ROTATION des flèches */
+  .dropdown-submenu a::after {
+    transform: rotate(-90deg);
+    position: absolute;
+    right: 6px;
+    top: .8em;
+  }
+  
+  /* --------------------- */
+  /* SPECIAL : ROTATION des flèches */
+  /* Niveau 1 */
+  li .dropdown-toggle:after {
+    transition: all 0.5s;
+  }
+  li.show > .dropdown-toggle:after {
+    transform: rotate(180deg);
+  }
+  /* sous-Niveaux suivants */
+  li li.show > .dropdown-toggle:after {
+    transform: rotate(90deg);
+  }
+  /* --------------------- */
+  .cart-detail .dropdown{
+    min-width: 250px;
+    padding: 4px;
+  }
+  .cart-detail .dropdown-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .cart-detail .dropdown-list div:not(:last-of-type){
+    border-right: 1px solid lightgrey;
+  }
+  .cart-detail  .dropdown-list div{
+        margin: 3px auto;
+        padding: 0 3px;
+  }
+/* media medium */
+@media (max-width:768px) {
+
+}
+/* small media  */
+@media (max-width: 575px) {
+    nav .navbar-collapse span.left,
+    nav .navbar-collapse span.right{
+        display: initial !important;
+    }
+    .login{
+        right: 70px;
+    }
+    .cart-detail {
+        right: 102px;
+    }
+    nav ul li a,.dropdown-item{
+        text-align: center !important;
+    }
+}

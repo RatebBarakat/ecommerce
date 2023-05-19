@@ -1,0 +1,24 @@
+@import url(variables.css);
+input:focus {
+    border: 1px solid var(--blue);
+    box-shadow: 0 0 6px var(--blue)!important;
+}
+.cart-count{
+    width: 27px;
+    height: 27px;
+    font-size: 16px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+label{
+    margin-bottom: 3px;
+}
+.cart-content{
+    height: fit-content;
+    margin-left: 10px;
+}
+.cart-content .list-group-item:not(:last-of-type){
+    border-bottom: 1px solid lightgrey !important;
+}

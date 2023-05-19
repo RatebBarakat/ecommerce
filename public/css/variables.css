@@ -1,0 +1,24 @@
+:root{
+    --blue: #2188c1;
+    --body-color: #eee;
+    --container-color: white;
+    --black: black;
+    --white: white;
+    --main-color: #fbfbfb;
+    --input-color: white;
+    --dropdown-color: white;
+    --dropdown-item-hover:#e9ecef;
+    --border-color:#e3e6f0;
+}
+body.active{
+    --blue: aqua;
+    --body-color: rgb(26, 26, 26);
+    --container-color: rgb(73, 73, 73);
+    --black: white;
+    --white: black;
+    --main-color: #343434;
+    --input-color: #555;
+    --dropdown-color: rgb(102, 102, 102);
+    --dropdown-item-hover: #444444;
+    --border-color:lightgrey;
+}
